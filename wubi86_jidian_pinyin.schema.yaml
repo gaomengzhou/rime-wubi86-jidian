@@ -14,11 +14,15 @@ schema:
 
 switches:
   - name: full_shape
-    states: [ 半角, 全角 ]
-  - name: extended_charset
-    states: [ 常用, 扩展 ]
+    states: [半角, 全角]
   - name: ascii_punct
-    states: [ 。，, ．， ]
+    reset: 1
+    states: [。，, ．，]
+  - name: extended_charset
+    states: [常用, 扩展]
+  - name: ascii_mode
+    reset: 0
+    states: [中文, 英文]
 
 engine:
   processors:
